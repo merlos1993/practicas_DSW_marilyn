@@ -1,0 +1,19 @@
+fun main() {
+    val x = 8
+    val y = 0
+    val operador = "%"
+
+    val message = when (operador) {
+        "+" -> (x + y).toString()
+        "-" -> (x - y).toString()
+        "*" -> (x * y).toString()
+        "/" -> if (y == 0) {
+            "Error: No se puede dividir entre cero."
+        } else {
+            (x / y).toString()
+        }
+        else -> "Error: El operador no es válido."
+    }
+
+    println(message)
+}
